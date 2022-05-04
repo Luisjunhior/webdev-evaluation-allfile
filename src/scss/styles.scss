@@ -1,0 +1,126 @@
+$red: #D43B3B;
+$dark-red: #AC2F2F;
+$gray: #666;
+$gray2: #444; 
+
+* {
+  text-align: center;
+}
+
+.homepage_title--alt2 {
+  font-size: 1.8em;
+}
+
+.color-langues {
+  color: $red;
+}
+
+h1,
+.row_text_coursename, .row_text_link a{
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.homepage_descrip {
+  font-size: 1.3em;
+  line-height: 1.5em;
+  color: $gray;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+p {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: $gray2;
+}
+
+#section-apprendre {
+  margin: 20px;
+  padding-top: 2em;
+}
+
+
+// seccion row
+.row {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding-top: 4em;
+
+  &-item {
+    flex-basis: 280px;
+    height: 350px;
+    overflow: hidden;
+    border-bottom: 1px solid $gray2;
+
+    &:hover{
+      .row_img, .row_text {
+        transform: translate(0%, -2.5em);
+      }
+    }
+  }
+
+  &_img{
+    width: 280px;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+
+    img{
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_text{
+    border: 1px solid $gray2;
+    border-top: 1px solid #ffffff00;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    margin: 0;
+
+    &_coursename{
+      padding: 2em 0;
+      color: $gray2;
+
+      span{
+        color:$red;
+      }
+    }
+
+    &_link{
+      display: block;
+      background-color: $red;
+      padding: .75em;
+      position: relative;
+      transition: all .7s ease-in-out;
+
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+
+      &:hover{
+        background-color: $dark-red;
+      }
+      
+      a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1em;
+        color: white;
+      }
+
+      span{
+        color: white;
+        font-size: 1em;
+      }
+    }
+  }
+}
